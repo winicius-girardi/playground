@@ -1,6 +1,5 @@
 package Entrega.Compass.EstoqueProduto;
 
-import java.util.ArrayList;
 
 public class Produto {
     private String nome;
@@ -16,21 +15,20 @@ public class Produto {
         this.codigo=codigo;
     }
 
-
+    public int getCodigo() {
+        return codigo;
+    }
 
     public void addEstoque(int quantidadeEstoque){
         this.quantidadeEstoque+=quantidadeEstoque;
 
     }
 
-    public boolean equals(Produto prod){
-        return this.codigo == prod.codigo;
-    }
 
 
     public void remEstoque(int quantidadeEstoque){
         if (quantidadeEstoque>this.quantidadeEstoque){
-                System.out.println("Estoque nao tem quantidade disponivel");
+                System.out.println("Estoque nao tem quantidade necessaria\n\n");
                 return;}
         this.quantidadeEstoque-=quantidadeEstoque;
     }
