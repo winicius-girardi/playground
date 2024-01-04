@@ -31,6 +31,8 @@ public class Employee {
 
     @Override
     public String toString() {
+        if(this.bonus<0)
+            return "\n\nFuncionario:" +this.name +"\nSalário: "+ this.salary+"\nDesconto: "+this.bonus+"\n\nSalário Liquido: "+this.realSalary()+"\n\n";
         return "\n\nFuncionario:" +this.name +"\nSalário: "+ this.salary+"\nBonus: "+this.bonus+"\n\nSalário Liquido: "+this.realSalary()+"\n\n";
     }
 }
