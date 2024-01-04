@@ -13,17 +13,6 @@ public class ProcessString {
         }
         return count;
 
-//        for(String i:a)
-//            System.out.println("\t"+i+"\tToken"+token);
-//        if (a.length==1){
-//            if(a[0].equals(token))
-//                return 1;
-//            return 0;
-//        }
-//        else if (a.length==0)
-//                return 0;
-//
-//        return a.length-1;
     }
     public static void printFelling(int count){
         if(count>0)

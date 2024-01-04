@@ -9,7 +9,7 @@ public class Emoticons {
         int count=0;
         Scanner scan=new Scanner(System.in);
         System.out.println("Digite a frase para analise");
-        String setence=scan.next();
+        String setence=scan.nextLine();
         count+=ProcessString.countToken(setence,")");
         count-=ProcessString.countToken(setence,"(");
         ProcessString.printFelling(count);
