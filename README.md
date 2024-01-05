@@ -1,36 +1,42 @@
-BONUS
+# BONUS
 
 
 para rodar:
+```
+javac -d ./out  Bonus/*.java 
+```
+```
+java -cp out Entrega.Compass.Bonus.RegisterEmployee 
+```
 
-$ javac -d ./out  Bonus/*.java 
-
-$ java -cp out Entrega.Compass.Bonus.RegisterEmployee 
 
 
-
-
-QUIZ
+# QUIZ
 
 
 
 para rodar:
+```
 
-$ javac -d ./out Quiz/*.java
+javac -d ./out Quiz/*.java
 
-$ java -cp out Entrega.Compass.Quiz.Quiz
+```
+```
+java -cp out Entrega.Compass.Quiz.Quiz
+```
 
 
 
-
-LOGIN
+# LOGIN
 
 para rodar:
+```
 
-$ javac -d ./out Login/*.java
-
-$ java -cp out Entrega.Compass.Login.Login
-
+javac -d ./out Login/*.java
+```
+```
+java -cp out Entrega.Compass.Login.Login
+```
 
 
 
@@ -39,29 +45,36 @@ EMOTICONS
 
 para rodar:
 
-$ javac -d ./out Emoticons/*.java
+```
+javac -d ./out Emoticons/*.java
+```
+```
 
-$ java -cp out Entrega.Compass.Emoticons.Emoticons
-
-
-
-
-PALINDROMO
-
-para rodar:
-
-$ javac -d ./out Palindromo/*.java
-
-$ java -cp out Entrega.Compass.PalindromoMain
+java -cp out Entrega.Compass.Emoticons.Emoticons
+```
 
 
 
-GERENCIAMENTO DE ESTOQUE DE PRODUTOS
+# PALINDROMO
 
 para rodar:
+```
 
-$ java -d ./out2 EstoqueProduto/*.java
+javac -d ./out Palindromo/*.java
+```
+```
+java -cp out Entrega.Compass.PalindromoMain
+```
 
-$ java -cp out Entrega.Compass.EstoqueProduto.MainProduto 
 
+# GERENCIAMENTO DE ESTOQUE DE PRODUTOS
+
+para rodar:
+```
+
+java -d ./out2 EstoqueProduto/*.java
+```
+```
+java -cp out Entrega.Compass.EstoqueProduto.MainProduto 
+```
 
