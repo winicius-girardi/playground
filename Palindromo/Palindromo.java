@@ -11,7 +11,7 @@ public class Palindromo {
     public boolean checkPalindromo(){
         String[] aux=this.setence.split("");
 
-        for(int k=0,i= aux.length-1;i>=0;i--,k++){
+        for(int k=0,i= aux.length-1;i>=k;i--,k++){
             if(aux[i].compareTo(aux[k])!=0)
                 return false;
         }
