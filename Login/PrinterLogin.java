@@ -4,10 +4,7 @@ package Entrega.Compass.Login;
 import java.time.LocalTime;
 public class PrinterLogin {
 
-    public static void initialMsg(){
-        System.out.println("Digite o nome de usuário e após digite a senha.");
 
-    }
     public static void checkHour(LocalTime time){
         int hour =time.getHour();
         if(hour<=5)

@@ -5,7 +5,7 @@ public class Users {
     private String password;
 
 
-    public boolean equals(Users users) {
+    public boolean checkUser(Users users) {
         return this.username.equals(users.username)&&this.password.equals(users.password);
 
     }
