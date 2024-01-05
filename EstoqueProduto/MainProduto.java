@@ -18,13 +18,12 @@ public class MainProduto {
         System.out.println("ADICIONANDO ESTOQUE\n\n");
         prodArrayHandler.addEstoque(produtoArrayList,1,10);
         prodArrayHandler.addEstoque(produtoArrayList,2,10);
-        System.out.println("REMOVENDO ESTOQUE\n\n");
         prodArrayHandler.remEstoque(produtoArrayList,1,10);
         prodArrayHandler.remEstoque(produtoArrayList,2,1000);
         prodArrayHandler.addProduto(produtoArrayList,"Coca-Cola",1,5.00,10);
         prodArrayHandler.addProduto(produtoArrayList,"Pepsi",10,4.00,10);
-
-
+        prodArrayHandler.remEstoque(produtoArrayList,8,10);
+        prodArrayHandler.addEstoque(produtoArrayList,9,10);
     }
 
 

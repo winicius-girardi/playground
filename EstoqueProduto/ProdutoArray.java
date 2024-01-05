@@ -23,7 +23,7 @@ public class ProdutoArray {
                 return;
             }
         }
-
+        System.out.println("PRODUTO ADICIONADO\n\n");
         produtoArrayList.add(new Produto(nome,codigo,preco,quantidadeEstoque));
     }
 
@@ -32,26 +32,31 @@ public class ProdutoArray {
             System.out.println(produto);
         }
     }
-    public  void addEstoque(ArrayList<Produto> produtoArrayList,int codigo,int quantidadeEstoque){
-        for (Produto produto:produtoArrayList){
-            if (produto.getCodigo()==codigo){
-                produto.addEstoque(quantidadeEstoque);
-                System.out.println(produto);
-                return;
-            }
-        }
-        System.out.println("Produto com codigo "+codigo+" nao encontrado\n\n");
+    public  void addEstoque(ArrayList<Produto> produtoArrayList,int codigo,int quantidadeEstoque) {
+        Produto produto = getProduto(produtoArrayList, codigo);
+        if (produto != null) {
+            produto.addEstoque(quantidadeEstoque);
+            System.out.println("ADICIONANDO ESTOQUE:\n"+produto);
+        } else
+            System.out.println("Produto com codigo " + codigo + " nao encontrado\n\n");
     }
     public void remEstoque(ArrayList<Produto> produtoArrayList,int codigo,int quantidadeEstoque){
+
+        Produto produto=getProduto(produtoArrayList,codigo);
+        if(produto!=null){
+            produto.remEstoque(quantidadeEstoque);
+            System.out.println("REMOVENDO ESTOQUE:\n"+produto);
+        }
+        else
+            System.out.println("Produto com codigo "+codigo + " nao encontrado\n\n");
+    }
+    public Produto getProduto(ArrayList<Produto> produtoArrayList,int codigo){
         for (Produto produto:produtoArrayList){
             if (produto.getCodigo()==codigo){
-                produto.remEstoque(quantidadeEstoque);
-                System.out.println(produto);
-                return;
+                return produto;
             }
         }
-        System.out.println("Produto com codigo "+codigo + " nao encontrado");
+        return null;
     }
-
 
 }
