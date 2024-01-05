@@ -81,7 +81,7 @@ A classe Produto mapeia Produto. ProdutoArray faz o gerenciamento de um array de
 
 ### Para rodar:
 ```
-java -d ./out2 EstoqueProduto/*.java
+javac -d ./out EstoqueProduto/*.java
 ```
 ```
 java -cp out Entrega.Compass.EstoqueProduto.MainProduto 
