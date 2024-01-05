@@ -1,4 +1,4 @@
-package teste.quizz;
+package Entrega.Compass.Quiz;
 
 public class Player {
     private String name;
@@ -10,12 +10,15 @@ public class Player {
         this.rightAnswers=0;
         this.wrongAnswers=0;
     }
-    public void checkAnswers(String answer,int index){
-        if (Question.correctAnswers[index].equals(answer.toUpperCase()))
+    public void checkAnswers(char answer,int index){
+        if (Question.correctAnswers[index]==answer)
             this.addRightAnswers();
         else
             this.addWrongAnswers();
 
+    }
+    public String toString(){
+        return "\n\nUsuário: "+ this.getName()+"\nAcertos: "+ this.getRightAnswers()+"\nErros: "+this.getWrongAnswers();
     }
     public void addRightAnswers(){
         this.rightAnswers++;

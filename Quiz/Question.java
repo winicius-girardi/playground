@@ -1,4 +1,4 @@
-package teste.quizz;
+package Entrega.Compass.Quiz;
 
 public class Question {
 
@@ -13,6 +13,6 @@ public class Question {
     "1000 anos|4000 anos|1 milhão de anos|tempo indeterminado","Grafite|Rênio|Carbono|Ósmio","Pinguim|Galinha|Cegonha|Pato","Bicho-preguiça e guepardo|Tartaruga e leão|Coala e cavalo|Caracol e tubarão"
     };
 
-    final static String[] correctAnswers={"A","C","B","A","B","A","D","C","A","A"};
+    final static char[] correctAnswers={'A','C','B','A','B','A','D','C','A','A'};
 
 }

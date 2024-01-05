@@ -1,4 +1,5 @@
-package teste.quizz;
+package Entrega.Compass.Quiz;
+
 public  class QuizPrinter {
 
 
@@ -25,7 +26,7 @@ public  class QuizPrinter {
 
     }
     public static void quizPontuation(Player player){
-        System.out.printf("\tUsuário: "+ player.getName()+"\nAcertos: "+ player.getRightAnswers()+"\nErros: "+player.getWrongAnswers());
+        System.out.printf(player.toString());
 
     }
     public static void blankSpace(){
