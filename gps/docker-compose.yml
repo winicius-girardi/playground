@@ -3,19 +3,13 @@ version: '3.9'
 services:
 
   db:
+    container_name: db_gps
     image: postgres:13-bullseye
-    restart: always
-    # set shared memory limit when using docker-compose
-    shm_size: 128mb
-    # or set shared memory limit when deploy via swarm stack
-    #volumes:
-    #  - type: tmpfs
-    #    target: /dev/shm
-    #    tmpfs:
-    #      size: 134217728 # 128*2^20 bytes = 128Mb
+    restart: unless-stopped
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
     environment:
-      POSTGRES_PASSWORD: "user"
-      POSTGRES_USERNAME: "user"
-      POSTGRES_DB: "gps_test"
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
