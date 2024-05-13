@@ -7,10 +7,7 @@ import com.gps.poi.Service.PointsOfInterestService;
 import com.gps.poi.repository.PointsOfInterestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,7 +23,7 @@ public class PointsOfInterestController {
     public ResponseEntity<List<?>> getAllPoints(){
         return ResponseEntity.ok(pointsOfInterestRepository.getAllPOI());
     }
-    @PutMapping("/poi")
+    @PostMapping("/poi")
     public ResponseEntity<?> updatePointsOfInterest(@RequestBody PointsOfInterestRequest requestPOI){
         pointsService.validatorPOI(requestPOI);
         pointsOfInterestRepository.insertPOI(pointsService.returnPOI(requestPOI));

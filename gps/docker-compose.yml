@@ -2,6 +2,13 @@ version: '3.9'
 
 services:
 
+
+#  spring:
+#    container_name: aplic_gps
+#    image: java
+#    restart: unless-stopped
+
+
   db:
     container_name: db_gps
     image: postgres:13-bullseye
