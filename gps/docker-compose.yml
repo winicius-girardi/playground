@@ -1,13 +1,14 @@
 version: '3.9'
-
 services:
-
-
-#  spring:
-#    container_name: aplic_gps
-#    image: java
-#    restart: unless-stopped
-
+  gps_apli:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - gps-net
+    depends_on:
+      - db
 
   db:
     container_name: db_gps
@@ -19,4 +20,8 @@ services:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"
+      - "5432"
+    networks:
+      - gps-net
+networks:
+  gps-net:

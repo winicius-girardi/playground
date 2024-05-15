@@ -3,4 +3,4 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: aplication_test
     password: aplication_test
-    url: "jdbc:postgresql://localhost:5432/gps_test"
+    url: "jdbc:postgresql://db:5432/gps_test"
